@@ -2,19 +2,17 @@
 @media (min-height: 350px){
 	.logobottom{
 		position: absolute;
-		bottom: 15px;
+		bottom: 0;
 		display: block;
 		width: 100%;
 		text-align: center;
 		font-size: 2em;
-		color: #ccc;
 	}
 }
 @media (min-height: 435px){
 	.navitem{
 		height: 74px;
 		line-height: 74px;
-		border-bottom: 1px solid #222;
 	}
 }
 
@@ -22,11 +20,19 @@
 	.navitem{
 		height: 99px;
 		line-height: 99px;
-		border-bottom: 1px solid #222;
 	}
 }
 
 /*------------- Width --------------*/
+
+@media (min-width: 450px){
+	header{
+		width: 100px;
+	}
+	.sidebar-wrapper{
+		margin-left: 100px;
+	}
+}
 
 @media (min-width: 750px){
 }
