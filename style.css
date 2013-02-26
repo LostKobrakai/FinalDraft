@@ -108,10 +108,17 @@ img{
 	height: auto;
 }
 
+/*------------- Buttons --------------*/
+
+.buttons{
+	float: right;
+}
+
 .button{
 	display: block;
 	width: 2em;
 	height: 2em;
+	margin: 0 2px;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	background: #000;
@@ -119,6 +126,11 @@ img{
 	line-height: 2em;
 	font-size: 1.5em;
 	color: #fff;
+}
+
+.button:hover{
+	text-decoration: none;
+	color: attr(data-hover);
 }
 
 /*------------- NAV --------------*/
