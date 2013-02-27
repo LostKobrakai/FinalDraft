@@ -282,7 +282,7 @@ iframe{
 */
 
 [data-icon]:before {
-  font-family: entypo_mine;
+  font-family: "entypo_mine";
   content: attr(data-icon);
   speak: none; /* Not to be trusted, but hey. */
 	-webkit-font-smoothing: antialiased;
