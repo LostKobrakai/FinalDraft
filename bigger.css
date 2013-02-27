@@ -43,7 +43,7 @@
 	}
 	.content{
 		max-width: 40em;
-		padding: 0 1.5em;
+		padding: 1em 1.5em 0;
 		margin: 0 auto;
 	}
 	.sidebar-wrapper{
