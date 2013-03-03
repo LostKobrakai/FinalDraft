@@ -1,0 +1,146 @@
+*{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.over, .over header{
+	overflow: hidden;
+	margin-right: 15px;
+}
+
+header{
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	padding: 0 5%;
+	line-height: 100px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYV2NkYGCQBOLnQIwXMEJl8SkGy8EUgtRjUwwXQ1aIrhhFI7pCmDsxTMemEKt7ybKaKM+QFDz4AlwSAIwSDyQACSZSAAAAAElFTkSuQmCC) repeat;
+}
+
+h6{
+	font-size: 1.6em;
+	margin: 0 .3em;
+}
+
+a{
+	border: 1px solid;
+	border-radius: 15px;
+	padding: 3px 10px;
+	color: inherit;
+}
+
+header h1{
+	display: inline;
+	vertical-align: middle;
+}
+
+header [data-icon]:before{
+	font-size: 3em;
+	vertical-align: middle;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.logo{
+	width: 30%;
+}
+
+nav{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
+	width: 70%;
+}
+
+nav ul{
+	list-style: none;
+	display: inline;
+	visibility: hidden;
+}
+
+.over nav ul{
+	visibility: visible;
+}
+
+nav ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+.fullwidth{
+	width: 100%;
+	height: auto;
+}
+
+.overlay{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	background: rgba(0,0,0,0.5);
+	padding-top: 100px;
+	overflow: auto;
+}
+
+.menutrigger:hover .overlay, .overlay:hover{
+	display: block;
+}
+
+.over header{
+	color: #fff;
+}
+
+.item{
+	display: inline-block;
+	width: 25%;
+	height: 60%;
+	background: #eee;
+	padding: 2%;
+	margin: 4%;
+}
+
+/*------------- ICONFONT --------------*/
+@font-face {
+  font-family: 'entypo_mine';
+  src: url("../font/entypo_mine.eot?73975351");
+  src: url("../font/entypo_mine.eot?73975351#iefix") format('embedded-opentype'), url("../font/entypo_mine.woff?73975351") format('woff'), url("../font/entypo_mine.ttf?73975351") format('truetype'), url("../font/entypo_mine.svg?73975351#entypo_mine") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'entypo_mine';
+    src: url('font/entypo_mine.svg?73975351#entypo_mine') format('svg');
+  }
+}
+*/
+
+[data-icon]:before {
+  font-family: "entypo_mine";
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+	-webkit-font-smoothing: antialiased;
+}
+.icon-alone {
+  display: inline-block; /* Fix for clickability issue in WebKit */
+}
+.screen-reader-text { /* Reusable, toolbox kind of class */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}

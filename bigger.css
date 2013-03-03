@@ -26,12 +26,7 @@
 /*------------- Width --------------*/
 
 @media (min-width: 450px){
-	header{
-		width: 100px;
-	}
-	.sidebar-wrapper{
-		margin-left: 100px;
-	}
+
 }
 
 @media (min-width: 840px){
@@ -41,18 +36,11 @@
 }
 
 @media (min-width: 900px){
+	header{
+		width: 100px;
+	}
 	.content-wrapper{
-		display: block;
-	}
-	.text{
-		max-width: 40em;
-		padding: 0 1.5em 0;
-		margin: 0 auto 0;
-	}
-	.sidebar-wrapper{
-		width: 350px;
-		float: left;
-		margin-left: 0;
+		/*margin-left: 450px;*/
 	}
 }
 
@@ -63,6 +51,6 @@
 		margin-left: 0;
 	}
 	.content-wrapper{
-		margin-left: 800px;
+		/*margin-left: 800px;*/
 	}
 }

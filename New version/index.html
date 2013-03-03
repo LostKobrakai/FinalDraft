@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<script type="text/javascript">
+		function ready(){
+			document.getElementById("menutrigger").addEventListener("click", toggle);
+		}
+		function toggle(e){
+			e.preventDefault();
+			var overlay = document.getElementById("ol");
+			if(overlay.style.display != "none"){
+				overlay.style.display = "none";
+				document.body.className = "";
+			}else{
+				window.scrollTo(0);
+				overlay.style.display = "block";
+				document.body.className = "over";
+			}
+		}
+	</script>
+</head>
+<body onload="ready();">
+	<header>
+		<span class="logo">
+			<span aria-hidden="true" data-icon="5" title="Benjamin Milde"></span>
+			<h1>Benjamin Milde</h1>
+		</span>
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Print</a></li>
+				<li><a href="">Digital</a></li>
+				<li><a href="">Fotografie</a></li>
+				<li><a href="">Kontakt</a></li>
+			</ul>
+			<a id="menutrigger" href="#">Menu</a>
+		</nav>
+	</header>
+	<div id="ol" class="overlay" style="display:none">
+		<div class="item">
+			<h6 class="itemhead">Heading</h6>
+			<img src="../images/gallery/printprojekt/image-04.jpg" alt="" class="itemimg">
+			<p class="itemdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div><div class="item">
+			<h6 class="itemhead">Heading</h6>
+			<img src="../images/gallery/printprojekt/image-04.jpg" alt="" class="itemimg">
+			<p class="itemdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div><div class="item">
+			<h6 class="itemhead">Heading</h6>
+			<img src="../images/gallery/printprojekt/image-04.jpg" alt="" class="itemimg">
+			<p class="itemdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div><div class="item">
+			<h6 class="itemhead">Heading</h6>
+			<img src="../images/gallery/printprojekt/image-04.jpg" alt="" class="itemimg">
+			<p class="itemdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div><div class="item">
+			<h6 class="itemhead">Heading</h6>
+			<img src="../images/gallery/printprojekt/image-04.jpg" alt="" class="itemimg">
+			<p class="itemdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	<div class="main">
+		<img src="../images/gallery/printprojekt/image-04.jpg" class="fullwidth">
+		<h2>Prontprojekt</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<footer></footer>
+</body>
+</html>

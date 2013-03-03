@@ -1,275 +1,489 @@
+@charset "CP850";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/*
++---------------------------------------------------------------------+
+|        _                               _         _                  |
+|       | |_  _   _  _ __    ___  _ __  | |  __ _ | |_  ___           |
+|       | __|| | | || '_ \  / _ \| '_ \ | | / _` || __|/ _ \          |
+|       | |_ | |_| || |_) ||  __/| |_) || || (_| || |_|  __/          |
+|        \__| \__, || .__/  \___|| .__/ |_| \__,_| \__|\___|          |
+|             |___/ |_|          |_|                                  |
+|                                                                     |
+|                                                                     |
+| URL: http://typeplate.com                                           |
+| VERSION: 1.0.0                                                      |
+| Github: https://github.com/typePlate/typeplate.github.com           |
+| AUTHORS: Zachary Kain (@zakkain) & Dennis Gaebel (@gryghostvisuals) |
+| LICENSE: Creative Commmons                                          |
+| http://creativecommons.org/licenses/by/3.0                          |
+|                                                                     |
++---------------------------------------------------------------------+
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026; }
 
-html{
-	height: 100%;
-	width: 100%;
-}
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C; }
 
-body{
-	background: #f1f1f1;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-	line-height: 1.6em;
-}
+body {
+  word-wrap: breakword; }
 
-/*------------- Typografie --------------*/
+pre code {
+  word-wrap: normal; }
 
-a{
-	font-family: "Open Sans";
-	font-size: .9em;
-	color: #2c5c9c;
-	text-decoration: none;
-}
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent);
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+html {
+  font: 300 100%/1.65 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-a:hover{
-	text-decoration: underline;
-}
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: #444444; }
 
-.social a{
-	display: inline-block;
-	*display: inline;
-	width: 200px;
-}
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0; }
 
-p{
-	margin: 1em 0 0;
-}
+.tera {
+  font-size: 117px;
+  font-size: 7.3125rem;
+  margin-bottom: 0.22564rem; }
 
-h1, h2, h3, h4, h5, h6{
-	color: inherit;
-	font-family: "Open Sans Condensed";
-	margin: 1em 0 0;
-}
+.giga {
+  font-size: 90px;
+  font-size: 5.625rem;
+  margin-bottom: 0.29333rem; }
 
-hgroup{
-	margin: 0 0 1em;
-}
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  margin-bottom: 0.36667rem; }
 
-h1{
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+  margin-bottom: 0.44rem; }
 
-}
+.beta, h2 {
+  font-size: 48px;
+  font-size: 3rem;
+  margin-bottom: 0.55rem; }
 
-h2{
-	font-size: 36px;
-	font-size: 2.25rem;
-	line-height: 1.3em;
-}
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 0.73333rem; }
 
-h3{
-	font-size: 14px;
-	font-size: .875rem;
-	color: #888;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	border-bottom: 1px solid #888;
-	padding-bottom: 1em;
-}
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 1.1rem; }
 
-h4{
-	color: #6e6e6e;
-}
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  margin-bottom: 1.25714rem; }
 
-h5{
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 1.46667rem; }
 
-}
+p + p {
+  text-indent: 1.5em; }
 
-h6{
-	font-size: 14px;
-	font-size: .875rem;
-	letter-spacing: 2px;
-	color: #c5c5c5;
-}
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap; }
 
-.tel{
-	padding-right: .3em;
-}
+pre {
+  white-space: pre; }
 
-.center{
-	text-align: center;
-}
+code {
+  white-space: pre;
+  font-family: monospace; }
 
-.talk{
-	font-family: Georgia, serif;
-	letter-spacing: 2px;
-}
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray; }
+  abbr:hover {
+    cursor: help; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222; }
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0; }
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre; }
+.lining dd + dd:before {
+  content: ", "; }
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem; }
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions; }
+  .dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions; }
+  .dictionary-style dd:before {
+    content: counter(definitions, decimal) ". "; }
+
+/**
+ * Stats Tab Markup
+ *
+	<ul class="stats-tabs">
+		<li><a href="#">[value]<b>[name]</b></a></li>
+	</ul>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.stats-tabs {
+  padding: 0; }
+  .stats-tabs li {
+    display: inline-block;
+    margin: 0 0.625rem 0 0;
+    padding: 0 0.625rem 0 0;
+    border-right: 0.125rem solid #cccccc; }
+    .stats-tabs li:last-child {
+      margin: 0;
+      padding: 0;
+      border: none; }
+    .stats-tabs li a {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: bold; }
+      .stats-tabs li a b {
+        display: block;
+        margin: 0.125rem 0 0 0;
+        font-size: 0.875rem;
+        font-weight: normal; }
+
+/**
+ * Blockquote Markup
+ *
+	<blockquote cite="">
+		<p>&Prime;&Prime;</p>
+		<cite>
+			<small><a href=""></a></small>
+		</cite>
+	</blockquote>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.pull-quote {
+  position: relative;
+  padding: 1em; }
+  .pull-quote:before, .pull-quote:after {
+    height: 1em;
+    opacity: 0.15;
+    position: absolute;
+    font-size: 4em; }
+  .pull-quote:before {
+    content: '“';
+    top: 0em;
+    left: 0em; }
+  .pull-quote:after {
+    content: '”';
+    bottom: 0em;
+    right: 0em; }
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden; }
+
+body {
+  background: #f1f1f1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+.tel {
+  padding-right: .3em; }
+
+.center {
+  text-align: center; }
+
+.talk {
+  font-family: Georgia, serif;
+  letter-spacing: 2px; }
+
+small {
+  font-size: 65%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Condensed"; }
 
 /*------------- Bilder --------------*/
-img{
-	display: block;
-	max-width: 100%;
-	*width: 100%;
-	height: auto;
-	margin: 1em 0 0;
-}
+img {
+  display: block;
+  max-width: 100%;
+  *width: 100%;
+  height: auto;
+  margin: 1em 0 0; }
+
+.max-width {
+  width: 100%;
+  height: auto; }
 
 /*------------- Buttons --------------*/
+.buttons {
+  text-align: right;
+  float: right;
+  overflow: hidden; }
 
-.buttons{
-	text-align: right;
-	float: right;
-	overflow: hidden;
-}
+.button {
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #000;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.5em;
+  color: #fff; }
 
-.button{
-	width: 2em;
-	height: 2em;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-	background: #000;
-	text-align: center;
-	line-height: 2em;
-	font-size: 1.5em;
-	color: #fff;
-}
-
-.button:hover{
-	text-decoration: none;
-	color: attr(data-hover);
-}
+.button:hover {
+  text-decoration: none;
+  color: attr(data-hover); }
 
 /*------------- NAV --------------*/
-header{
-	width: 50px;
-	height: 100%;
-	overflow: auto;
-	float: left;
-	border-right: 5px solid #111;
-	position: relative;
-	color: #333;
-}
+header {
+  width: 50px;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  border-right: 5px solid #111111;
+  position: relative;
+  color: #333; }
 
-.nav{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
 
-.navitem{
-	font-size: 1.7em;
-	height: 49px;
-	line-height: 49px;
-	border-bottom: 1px solid #ddd;
-}
+.navitem {
+  font-size: 1.5em;
+  height: 49px;
+  line-height: 49px;
+  border-bottom: 1px solid #dddddd; }
 
-.navitem a{
-	color: inherit;
-	text-decoration: none;
-}
+.navitem a {
+  color: inherit;
+  text-decoration: none; }
 
-.active{
-	color: #1b395f;
-}
+.active {
+  color: #1b395f; }
 
-.logobottom{
-	display: none;
-}
-
+.logobottom {
+  display: none; }
 
 /*------------- SubNAV --------------*/
-.sidebar-wrapper{
-	height: 100%;
-	margin-left: 50px;
-	overflow-y: auto;
-	overflow-x: hidden;
-  border-right: 2px solid #111;
-}
+.sidebar-wrapper {
+  margin-left: 50px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 2px solid #111111; }
 
-.sidebar{
-	padding: 1em 30px;
-}
+.sidebar.ajax {
+  float: left;
+  width: 270px;
+  margin: 0; }
 
-.subnav{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
+.sidebar {
+  padding: 1em 30px; }
 
-.subnavitem{
-	display: inline-block;
-	width: 100%;
-	max-width: 320px;
-	margin: 0 7px 15px 7px;
-	text-align: center;
-}
+.subnav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
 
-.subnavitemimg{
-	width: 100%;
-	margin: 0;
-}
+.subnavitem {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 7px 15px 7px;
+  text-align: center; }
 
-.subnavitem:hover .subnavitemtext{
-	color: #000;
-	background: #fff;
-}
+.subnavitem:hover .subnavitemtext {
+  color: #444444;
+  background: #fff; }
 
-.subnavitemtext{
-	font-family: "Open Sans Condensed";
-	font-weight: 700;
-	letter-spacing: 1px;
-	line-height: 2.2em;
-	width: 100%;
-	background: #000;
-	color: #fff;
-}
+.subnavitemtext {
+  font-family: "Open Sans Condensed";
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 2.2;
+  width: 100%;
+  background: #000;
+  color: #fff; }
 
-.year{
-	display: block;
-	width: 90px;
-	height: 90px;
-	max-width: 320px;
-	margin: 20px auto 35px;
-	padding: 10px;
-	background: #000;
-	color: #fff;
-	text-align: center;
-	border-radius: 50%;
-}
+.year {
+  display: block;
+  width: 90px;
+  height: 90px;
+  max-width: 320px;
+  margin: 20px auto 35px;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%; }
 
-.yeartitle{
-	line-height: 70px;
-}
+.yeartitle {
+  line-height: 70px; }
 
 /*------------- CONTENT --------------*/
-.content-wrapper{
-	display: none;
-	overflow: auto;
-	margin-left: 450px;
-	padding-top: 1em;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
+.content-wrapper {
+  display: block;
+  overflow: auto;
+  height: 100%;
+  min-width: 320px; }
 
-iframe{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	width: 100%;
-	height: 100%;
-	margin-bottom: -10px;
-}
+.text {
+  max-width: 40em;
+  padding: 0 1.5em 0;
+  margin: 0 auto; }
 
-.intropic{
-	margin: 0;
-	width: 100%;
-	height: auto;
-}
+iframe {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -10px; }
+
+.infobar {
+  background: #000;
+  color: #fff;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 1.6; }
+
+.infobaritem {
+  padding: 0 10px; }
 
 /*------------- ICONFONT --------------*/
 @font-face {
   font-family: 'entypo_mine';
   src: url("font/entypo_mine.eot?73975351");
-  src: url("font/entypo_mine.eot?73975351#iefix") format('embedded-opentype'), url("font/entypo_mine.woff?73975351") format('woff'), url("font/entypo_mine.ttf?73975351") format('truetype'), url("font/entypo_mine.svg?73975351#entypo_mine") format('svg');
+  src: url("font/entypo_mine.eot?73975351#iefix") format("embedded-opentype"), url("font/entypo_mine.woff?73975351") format("woff"), url("font/entypo_mine.ttf?73975351") format("truetype"), url("font/entypo_mine.svg?73975351#entypo_mine") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -280,39 +494,34 @@ iframe{
   }
 }
 */
-
 [data-icon]:before {
   font-family: "entypo_mine";
   content: attr(data-icon);
-  speak: none; /* Not to be trusted, but hey. */
-	-webkit-font-smoothing: antialiased;
-}
+  speak: none;
+  /* Not to be trusted, but hey. */
+  -webkit-font-smoothing: antialiased; }
 
-.social [data-icon]:before{
-	display: inline-block;
-	font-size: 2em;
-	line-height: 1.625em;
-	vertical-align: middle;
-}
+.social [data-icon]:before {
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle; }
 
 .icon-alone {
-  display: inline-block; /* Fix for clickability issue in WebKit */
-}
-.screen-reader-text { /* Reusable, toolbox kind of class */
+  display: inline-block;
+  /* Fix for clickability issue in WebKit */ }
+
+.screen-reader-text {
+  /* Reusable, toolbox kind of class */
   position: absolute;
   top: -9999px;
-  left: -9999px;
-}
+  left: -9999px; }
 
 /*------------- scrollbar --------------*/
 ::-webkit-scrollbar {
-    width: 10px;
-}
+  width: 10px; }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.2);
-}
+  background: rgba(255, 255, 255, 0.2); }
 
 ::-webkit-scrollbar-thumb {
-   background: rgba(0,0,0,1);
-}
+  background: black; }
